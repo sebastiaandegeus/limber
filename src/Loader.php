@@ -1,6 +1,6 @@
 <?php
 
-namespace Sebastiaandegeus\Limber;
+namespace Limber;
 
 class Loader {
   public $wp_root = '/path_to_project/web/wp/';

@@ -9,7 +9,9 @@
         }
     ],
     "autoload": {
-        "psr-4": { "Limber\\": "src/" }
+        "psr-4": {
+            "Limber\\": "src/"
+        }
     },
     "require": {}
 }
