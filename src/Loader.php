@@ -2,15 +2,26 @@
 
 namespace Limber;
 
+use WP_Query;
+use WP_Rewrite;
+use WP;
+use WP_Widget_Factory;
+use WP_Roles;
+use WP_Locale;
+use WP_Error;
+
 class Loader {
-  public $wp_root = '/path_to_project/web/wp/';
+  public $wp_dir;
   public $plugins = array();
 
-  public function __construct() {
+  public function __construct( $config ) {
+    // set the directory path where WordPress is located
+    $this->wp_dir = $config['wp'];
+
     define('LIMBER', true);
 
     // Include files required for initialization.
-    require( '/path_to_project/web/wp-config.php' );
+    require( $config['wp_config'] );
 
     /**
      * Used to set up and fix common variables and include
