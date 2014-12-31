@@ -1,0 +1,12 @@
+{
+    "name": "sebastiaandegeus/limber",
+    "description": "Load WordPress as light as possible.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sebastiaan de Geus",
+            "email": "sebastiaan@hoppinger.com"
+        }
+    ],
+    "require": {}
+}
