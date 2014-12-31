@@ -21,7 +21,12 @@ Resulted in an avarage of around 200+ ms
 
 ```
 A Limber load:
-$limber = new Limber();
+$limber = new Limber\Loader(
+  array(
+    'wp'        => __DIR__ .'/../../../web/wp',
+    'wp_config' => __DIR__ .'/../../../web/wp-config.php'
+  )
+);
 $limber::load();
 ```
 
@@ -32,12 +37,6 @@ So that's roughly a 100% improvement.
 ## Specify plugins to load
 
 ```
-$limber = new Limber\Loader(
-  array(
-    'wp'        => __DIR__ .'/../../../web/wp',
-    'wp_config' => __DIR__ .'/../../../web/wp-config.php'
-  )
-);
 $limber::plugin('plugin_directory_name/plugin_file.php');
 $limber::plugin('another_plugin_directory_name/another_plugin_file.php');
 $limber::load();
