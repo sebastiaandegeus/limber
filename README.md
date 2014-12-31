@@ -1,7 +1,7 @@
 Limber
 ======
 
-A tool to load WordPress as light as possible. By default WordPress loads all plugins, themes and API's on each request. But sometimes you want to build an API on top of your WordPress project. But you only want a specific set of plugins or no plugins at all. 
+A tool to load WordPress as light as possible. By default WordPress loads all plugins, themes and API's on each request. But sometimes you want to build an API on top of your WordPress project. But you only want a specific set of plugins or no plugins at all.
 
 Using Limber you can specify what you want to load and save time on each API request.
 
@@ -32,7 +32,12 @@ So that's roughly a 100% improvement.
 ## Specify plugins to load
 
 ```
-$limber = new Limber();
+$limber = new Limber\Loader(
+  array(
+    'wp'        => __DIR__ .'/../../../web/wp',
+    'wp_config' => __DIR__ .'/../../../web/wp-config.php'
+  )
+);
 $limber::plugin('plugin_directory_name/plugin_file.php');
 $limber::plugin('another_plugin_directory_name/another_plugin_file.php');
 $limber::load();
@@ -45,6 +50,8 @@ $limber::load();
 * optional loading of template functions
 * simplify the code to use Limber
 * clean up and extract parts of the loading into a seperate methods
+
+
 
 
 
