@@ -1,6 +1,8 @@
 <?php
 
-class Limber {
+namespace Sebastiaandegeus\Limber;
+
+class Loader {
   public $wp_root = '/path_to_project/web/wp/';
   public $plugins = array();
 

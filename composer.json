@@ -8,5 +8,8 @@
             "email": "sebastiaan@hoppinger.com"
         }
     ],
+    "autoload": {
+        "psr-4": { "Limber\\": "src/" }
+    },
     "require": {}
 }
