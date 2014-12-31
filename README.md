@@ -37,8 +37,7 @@ $limber::plugin('plugin_directory_name/plugin_file.php');
 $limber::plugin('another_plugin_directory_name/another_plugin_file.php');
 $limber::load();
 
-``
-
+```
 
 ## more to come
 * optional loading of theme
